@@ -1,0 +1,307 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1.5cm]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{multicol}
+\usepackage{titlesec}
+
+\hypersetup{colorlinks=true, urlcolor=black, linkcolor=black}
+
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{6pt}{4pt}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+\renewcommand{\familydefault}{\sfdefault}
+
+\begin{document}
+
+% =================================================================
+% BLOCO 1: CABEÇALHO
+% =================================================================
+% OBJETIVO: Identificação imediata. O ATS extrai nome, contato e
+% título diretamente daqui. Mantenha tudo em texto puro, sem tabelas
+% ou caixas --- ATS não lê formatações complexas.
+%
+% REGRAS:
+%   - Nome completo em destaque (sem abreviações)
+%   - Título profissional: use as palavras-chave EXATAS da vaga.
+%     Ex: se a vaga pede "Desenvolvedor Java Sênior", use isso,
+%     não "Engenheiro de Software Backend"
+%   - Telefone, e-mail, LinkedIn e GitHub em texto simples
+%   - Não coloque foto, CPF, data de nascimento ou endereço completo
+%   - LinkedIn e GitHub devem ter URLs clicáveis (hyperref faz isso)
+%
+% DICA ATS: O título (linha 2) é o campo mais lido pelos filtros
+% automáticos. Espelhe o headline da vaga palavra por palavra.
+% =================================================================
+
+\begin{center}
+{\LARGE \textbf{SEU NOME COMPLETO}} \\[3pt]
+\textbf{Título Profissional $|$ Tecnologia 1 $|$ Tecnologia 2 $|$ Tecnologia 3 $|$ Cloud $|$ CI/CD} \\[4pt]
+\small
+País $\bullet$ Disponível para mudança $\bullet$ Remoto / Híbrido / Presencial \\
+(XX) XXXXX-XXXX $\bullet$ seuemail@email.com \\
+\href{https://www.linkedin.com/in/luisfernando-eng}{linkedin.com/in/luisfernando-eng}
+$\bullet$
+\href{https://github.com/seu-usuario}{github.com/seu-usuario}
+\end{center}
+
+
+
+% =================================================================
+% BLOCO 2: RESUMO PROFISSIONAL
+% =================================================================
+% OBJETIVO: É o primeiro texto que o recrutador lê após o ATS
+% aprovar o currículo. Deve responder em 4 linhas: quem você é,
+% o que você faz, com o quê e qual seu diferencial.
+%
+% REGRAS:
+%   - 3 a 5 linhas, sem bullet points
+%   - Inclua as principais palavras-chave da vaga em negrito
+%   - Não use frases vagas: "profissional dedicado", "perfil dinâmico"
+%   - Mencione linguagem principal, stack, tipo de sistema e contexto
+%     (ex: alta volumetria, produção, fintech, e-commerce)
+%   - Termine com seu diferencial: o que te separa dos outros 100
+%     candidatos com o mesmo stack?
+%
+% ESTRUTURA SUGERIDA:
+%   [Formação] com [X anos] de experiência em [linguagem/stack],
+%   atuando em [tipo de sistema]. Experiência com [padrões/arquitetura].
+%   [Diferencial concreto: projeto real, escala, resultado mensurável].
+%   Perfil [colaborativo/hands-on] com foco em [qualidade/performance].
+%
+% DICA ATS: Repita aqui as mesmas palavras-chave do título.
+% ATS pondera frequência --- palavra que aparece 2x tem mais peso.
+% =================================================================
+
+\section*{Resumo Profissional}
+
+[Sua formação] com experiência no desenvolvimento de [tipo de aplicação] em \textbf{[Linguagem principal]} com \textbf{[Framework]}, atuando na construção e evolução de \textbf{[tipo de arquitetura]}. Experiência com \textbf{[padrão arquitetural]} e \textbf{[mensageria/evento]}, aplicando padrões como [padrões relevantes da vaga]. [Diferencial concreto: projeto real em produção, escala, impacto mensurável]. Perfil colaborativo, com participação em code reviews e aplicação de [boas práticas relevantes].
+
+
+% =================================================================
+% BLOCO 3: COMPETÊNCIAS TÉCNICAS
+% =================================================================
+% OBJETIVO: Este é o bloco mais importante para o ATS.
+% Sistemas ATS varrem este campo em busca de palavras-chave
+% que batem com os requisitos da vaga.
+%
+% REGRAS:
+%   - Liste EXATAMENTE as tecnologias pedidas na vaga
+%   - Use os nomes oficiais: "Spring Boot" (não "Springboot"),
+%     "PostgreSQL" (não "Postgres"), "GitHub Actions" (não "GH Actions")
+%   - Organize por categoria (Linguagens, Backend, Cloud etc.)
+%   - Não liste tecnologias que você não consegue defender em entrevista
+%   - O multicols aqui é só visual --- o ATS lê linha por linha de
+%     qualquer forma, então a ordem das categorias não importa para ele
+%
+% CATEGORIAS SUGERIDAS (adapte à sua área):
+%   Linguagens | Backend/Framework | Arquitetura | Mensageria |
+%   Banco de Dados | Testes | DevOps | Cloud | Versionamento | Métodos
+%
+% DICA ATS: Se a vaga menciona "Kafka" e você tem só RabbitMQ,
+% não coloque Kafka. Mas se você tem ambos, liste os dois.
+% Honestidade aqui evita problemas na entrevista técnica.
+% =================================================================
+
+\section*{Competências Técnicas}
+
+\begin{multicols}{2}
+\begin{itemize}[leftmargin=*, noitemsep]
+  \item \textbf{Linguagens:} [Liste suas linguagens, ex: Java (8+), Python]
+  \item \textbf{Backend:} [Frameworks e ferramentas, ex: Spring Boot, Spring MVC]
+  \item \textbf{Arquitetura:} [Padrões, ex: Microsserviços, SAGA, Clean Code, SOLID]
+  \item \textbf{Mensageria:} [ex: Kafka, RabbitMQ]
+  \item \textbf{Banco de Dados:} [ex: PostgreSQL, MySQL (SQL); DynamoDB (NoSQL)]
+  \item \textbf{Persistência:} [ex: JPA (Hibernate), Spring Data JPA]
+  \item \textbf{Testes:} [ex: JUnit, Mockito]
+  \item \textbf{DevOps:} [ex: Docker, Kubernetes, CI/CD (GitHub Actions)]
+  \item \textbf{Cloud:} [ex: AWS (EC2, S3, Lambda, RDS, DynamoDB)]
+  \item \textbf{Versionamento:} Git
+  \item \textbf{Metodologias:} [ex: Scrum, Kanban]
+\end{itemize}
+\end{multicols}
+
+
+% =================================================================
+% BLOCO 4: EXPERIÊNCIA PROFISSIONAL
+% =================================================================
+% OBJETIVO: Provar que você já fez na prática o que a vaga pede.
+% O ATS lê as palavras-chave; o recrutador lê os resultados.
+% Você precisa satisfazer os dois.
+%
+% REGRAS GERAIS:
+%   - Ordem cronológica inversa (mais recente primeiro)
+%   - Cada item começa com VERBO DE AÇÃO no passado ou presente:
+%     Desenvolveu / Implementou / Reduziu / Aumentou / Migrou /
+%     Projetou / Liderou / Otimizou
+%   - Nunca escreva "Responsável por..." --- isso descreve cargo,
+%     não entrega. Descreva o que VOCÊ FEZ e qual foi o RESULTADO.
+%   - Quantifique sempre que possível:
+%     "Reduziu o tempo de resposta em 40%"
+%     "Sistema processando 10k requisições/dia"
+%     "Eliminou 100% dos processos manuais de X"
+%   - Use as palavras-chave da vaga naturalmente nas frases
+%
+% ESTRUTURA DE CADA BULLET (fórmula CAR):
+%   [Contexto/Ação] + [Tecnologia usada] + [Resultado/Impacto]
+%   Ex: "Implementou comunicação assíncrona via Kafka entre 3
+%   microsserviços, reduzindo o acoplamento e aumentando a
+%   resiliência do sistema em cenários de falha parcial."
+%
+% SOBRE FREELANCE / AUTÔNOMO:
+%   Nomeie os projetos reais sempre que possível.
+%   "Sistema ERP para Empresa X (em produção desde 2023)" é
+%   muito mais forte do que "Projeto de gestão para cliente".
+%
+% DICA ATS: Coloque o nome das tecnologias dentro das frases,
+% não apenas na seção de competências. ATS pondera contexto.
+% "Implementei APIs REST com Spring Boot" > só listar "Spring Boot"
+% =================================================================
+
+\section*{Experiência Profissional}
+
+% -----------------------------------------------------------------
+% COMO PREENCHER O CABEÇALHO DE CADA EXPERIÊNCIA:
+%   \textbf{Cargo | Nome da Empresa ou Modalidade} \hfill Data início -- Data fim (ou Presente)
+%
+% Se for CLT: coloque empresa real
+% Se for freelance: "Desenvolvedor Back-End | Freelance / Projetos para Clientes"
+% Se for autônomo com projetos nomeados: mencione o projeto no bullet
+% -----------------------------------------------------------------
+
+\textbf{Cargo | Empresa ou Modalidade} \hfill mês/ano -- mês/ano (ou Presente) \\
+
+\begin{itemize}[leftmargin=*, noitemsep]
+  \item [Verbo de ação] + [o que foi feito] + [tecnologia usada] + [resultado ou escala].
+  \item [Verbo de ação] + [padrão arquitetural aplicado] + [problema resolvido].
+  \item [Verbo de ação] + [ferramenta/método] + [impacto mensurável se possível].
+  % Repita para cada contribuição relevante. Ideal: 4 a 8 bullets por cargo.
+  % Priorize o que a vaga pede. Se a vaga quer Kafka, seu bullet de
+  % mensageria deve ser o primeiro ou segundo da lista.
+\end{itemize}
+
+\vspace{4pt}
+
+% Repita o bloco acima para cada experiência anterior
+% Experiências antigas e menos relevantes: 2 a 3 bullets apenas
+
+
+% =================================================================
+% BLOCO 5: PROJETOS RELEVANTES
+% =================================================================
+% OBJETIVO: Compensar pouco tempo de CLT com projetos reais.
+% Para desenvolvedores com perfil freelance ou júnior/pleno,
+% este bloco pode ser tão importante quanto a experiência.
+%
+% REGRAS:
+%   - Liste apenas projetos com código no GitHub ou em produção
+%   - Priorize: (1) sistemas em produção real, (2) projetos com
+%     a stack da vaga, (3) projetos com resultado mensurável
+%   - Cada projeto: nome + link + 2 a 3 bullets
+%   - O primeiro bullet descreve O QUE É o sistema
+%   - O segundo bullet descreve A STACK e decisões técnicas
+%   - O terceiro bullet (opcional) descreve RESULTADO ou ESCALA
+%
+% DICA ATS: O nome do projeto não importa para o ATS.
+% O que importa são as palavras-chave dentro dos bullets.
+% Escreva "Backend Java com Spring Boot, APIs REST e JPA"
+% em vez de apenas "Sistema de gestão".
+%
+% DICA RECRUTADOR: Projetos em produção real com nome de empresa/cliente
+% têm muito mais peso do que projetos de portfólio genéricos.
+% Se o sistema está rodando e sendo usado, diga isso explicitamente.
+% =================================================================
+
+\section*{Projetos Relevantes}
+
+\textbf{Nome do Projeto --- Contexto (Ex: Em Produção / TCC / Open Source)} \hfill
+\href{https://github.com/seu-usuario/repositorio}{github.com/seu-usuario/repositorio}
+
+\begin{itemize}[leftmargin=*, noitemsep]
+  \item [O que é o sistema e qual problema resolve --- contexto de negócio]
+  \item [Stack técnica e decisões arquiteturais relevantes para a vaga]
+  \item [Resultado, escala ou diferencial --- ex: "em uso contínuo desde X", "X usuários"]
+\end{itemize}
+
+\vspace{3pt}
+
+% Repita para cada projeto relevante. Ideal: 2 a 4 projetos.
+% Mais do que 4 começa a poluir o currículo.
+
+
+% =================================================================
+% BLOCO 6: FORMAÇÃO ACADÊMICA
+% =================================================================
+% OBJETIVO: Validação formal. ATS filtra por grau mínimo em algumas
+% empresas. Coloque sempre o grau completo por extenso.
+%
+% REGRAS:
+%   - Ordem: mais recente primeiro
+%   - Use o nome oficial do curso e da instituição
+%   - Para curso em andamento: deixe explícito "(em andamento)"
+%     ou coloque a previsão de conclusão
+%   - Não liste cursos técnicos ou de ensino médio aqui
+%   - TCC relevante pode ser mencionado entre parênteses
+%
+% DICA ATS: Escreva o grau por extenso.
+% "Bacharelado" e não apenas "Bach." ---
+% alguns ATS não reconhecem abreviações.
+% =================================================================
+
+\section*{Formação Acadêmica}
+
+\textbf{Grau (ex: Mestrado / Bacharelado) em Nome do Curso} -- Nome da Instituição (ano ou "em andamento")
+
+\textbf{Grau em Nome do Curso} -- Nome da Instituição (ano de conclusão)
+
+
+% =================================================================
+% BLOCO 7: CURSOS E CERTIFICAÇÕES
+% =================================================================
+% OBJETIVO: Demonstrar atualização contínua e validar skills
+% que não aparecem na formação formal.
+%
+% REGRAS:
+%   - Liste certificações com nome oficial + instituição emissora
+%   - Para certificações em andamento: coloque "(em andamento)"
+%   - Certificações de cloud (AWS, GCP, Azure) têm alto peso
+%     em vagas de backend moderno --- coloque em primeiro
+%   - Não liste cursos sem certificado ou muito antigos (+5 anos)
+%   - Não liste cursos irrelevantes para a vaga
+%
+% DICA ATS: Use o nome oficial completo.
+% "AWS Certified Cloud Practitioner" tem mais peso nos filtros
+% do que apenas "Cloud Practitioner" ou "AWS básico".
+% =================================================================
+
+\section*{Cursos e Certificações}
+
+\textbf{Nome Oficial da Certificação} -- Instituição Emissora (ano ou "em andamento")
+
+\textbf{Nome do Curso} -- Plataforma (ex: Udemy, Alura, Coursera)
+
+
+% =================================================================
+% CHECKLIST FINAL ANTES DE ENVIAR
+% =================================================================
+%
+% [ ] O título do currículo espelha o título da vaga?
+% [ ] As palavras-chave da vaga aparecem no resumo E na experiência?
+% [ ] Cada bullet de experiência começa com verbo de ação?
+% [ ] Pelo menos 2 bullets têm resultado mensurável (número, %,
+%     escala, impacto)?
+% [ ] Os projetos em produção estão nomeados com empresa/cliente?
+% [ ] Não há tabelas, caixas de texto, colunas no meio do texto
+%     principal ou ícones? (ATS não lê esses elementos)
+% [ ] O arquivo será enviado como PDF gerado a partir do LaTeX?
+%     (Nunca envie o .tex diretamente)
+% [ ] O PDF tem menos de 2 páginas para vagas júnior/pleno?
+%
+% =================================================================
+
+\end{document}
