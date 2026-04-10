@@ -1,4 +1,4 @@
-markdown# 📄 Currículo LaTeX — Template Otimizado para ATS
+# 📄 Currículo LaTeX — Template Otimizado para ATS
 
 > Template profissional em LaTeX com guia completo de preenchimento,
 > desenvolvido para maximizar a aprovação em sistemas de triagem
